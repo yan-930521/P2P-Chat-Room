@@ -114,13 +114,17 @@ window.onload = () => {
         }
 
         // 預設的訊息內容
-        [
+        let defaultMsg = [
             `<div class="marquee"><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span></div><script>runMarquee()</script>`,
-            `<span class="highlighting">兩點距離</span> : <br> ((x1, y1)<sup>2</sup>-((x2, y2)<sup>2</sup>)<sup>1/2</sup>`,
-            `<span class="highlighting">畢氏定理</span> : <br> &radic;2+5`,
-            ` <img src="https://cdn.discordapp.com/emojis/960186560555393076.webp?size=160&quality=lossless">`
-
-        ].forEach((val, index) => {
+        ]
+        if(p2p.config.isHomework == "ok") {
+            defaultMsg = defaultMsg.concat([
+                `<span class="highlighting">兩點距離</span> : <br> ((x1, y1)<sup>2</sup>-((x2, y2)<sup>2</sup>)<sup>1/2</sup>`,
+                `<span class="highlighting">畢氏定理</span> : <br> &radic;2+5`
+            ]);
+        }
+        defaultMsg.push(` <img src="https://cdn.discordapp.com/emojis/960186560555393076.webp?size=160&quality=lossless">`)
+        defaultMsg.forEach((val, index) => {
             renderMsg(null, val, system_config);
         });
 

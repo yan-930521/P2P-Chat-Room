@@ -3,7 +3,8 @@ class P2P {
         this.config = {
             name: null,
             avatar: null,
-            host: null
+            host: null,
+            isHomework: true
         };
 
         for (let c in this.config) {
