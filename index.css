@@ -185,3 +185,12 @@ img {
     float: right;
     color: #807474;
 }
+
+a:link {
+    color: rgb(238, 194, 194);
+}
+
+a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
