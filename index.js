@@ -36,7 +36,7 @@ window.onload = () => {
         const btnJoin = document.querySelector("#join");
 
         const backgroundImages = [
-            "001.jpg",
+            "4K_VerD.jpg",
             //"005.gif"
         ]
 
